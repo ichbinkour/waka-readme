@@ -1,12 +1,17 @@
-name: "Hello World"
-description: "Greet someone and record the time"
+name: "Wakatime README"
+description: "Add your wakatime datas on your REAME.md powered by JavaScript."
+
 inputs:
-  username:
+  GH_TOKEN:
+    description: "Your Github token"
+    required: true
+  WT_TOKEN:
+    description: "Your Wakatime token"
+    required: true
+  USERNAME:
     description: "Your Github username"
     required: true
-outputs:
-  time: # id of output
-    description: "The time we greeted you"
+
 runs:
-  using: "node12"
-  main: "index.js"
+  using: "docker"
+  image: "Dockerfile"
